@@ -4,10 +4,10 @@ CS361 microservice that converts values between units over a REST API with JSON.
 
 ## Assigned teammates
 
-- Person 2
-- Person 3
-- Person 4
-- Person 5
+- Saugat
+- Yelyzaveta
+- Tristin
+- Jacob
 
 ## Communication pipe
 
