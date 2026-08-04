@@ -31,6 +31,37 @@ Query parameters:
 | `from` | Source unit |
 | `to` | Target unit |
 
+### Weight conversions 
+
+The service also supports weight conversions: pounds, kilograms, ounces, and grams. Use `from_unit` and `to_unit` for these.
+
+Example request:
+
+```python
+import requests
+
+response = requests.get(
+    "http://localhost:5003/convert",
+    params={
+        "value": 225,
+        "from_unit": "pounds",
+        "to_unit": "kilograms",
+    },
+)
+print(response.json())
+```
+
+Example response:
+
+```json
+{
+  "original_value": 225.0,
+  "original_unit": "pounds",
+  "converted_value": 102.06,
+  "converted_unit": "kilograms"
+}
+```
+
 ## How to run
 
 1. Python 3.10+
