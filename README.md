@@ -62,6 +62,24 @@ Example response:
 }
 ```
 
+## UML sequence diagram
+
+How another program requests and receives a conversion result:
+
+```mermaid
+sequenceDiagram
+    actor Client as Requesting Program
+    participant API as Unit Conversion Microservice
+
+    Client->>API: GET /convert?value=225&from_unit=pounds&to_unit=kilograms
+    API->>API: Validate numeric value
+    API->>API: Validate source and target units
+    API->>API: Select conversion formula
+    API->>API: Calculate converted value
+    API->>API: Create JSON response
+    API-->>Client: JSON conversion result
+```
+
 ## How to run
 
 1. Python 3.10+
